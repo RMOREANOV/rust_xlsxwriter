@@ -11139,7 +11139,7 @@ impl Worksheet {
                         // If the cell is in an autofilter header we add an
                         // additional 16 pixels for the dropdown arrow.
                         if pixel_width > 0
-                            && self.cells_with_autofilter.contains(&(row_num, col_num))
+                            && self.cells_with_autofilter.contains(&(self.dimensions.first_row, col_num))
                         {
                             pixel_width += 16;
                         }
